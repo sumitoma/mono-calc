@@ -3,11 +3,9 @@ language: node_js
 node_js:
     - 10    
 before_install:
-    - ./setup.sh 
+    - npm install -g express@4.17.1
     - export EXPRESS_HOME=$(npm root -g)
     - echo $EXPRESS_HOME
-env:
-    - EXPRESS_HOME=$EXPRESS_HOME
 install:
     - npm install --only=dev    
 script: 
