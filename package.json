@@ -1,0 +1,24 @@
+{
+  "name": "mono-calc",
+  "version": "1.0.0",
+  "description": "Sample project to demonstrate a monolithic application",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "mocha --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sumitoma/mono-calc.git"
+  },
+  "author": "sumitoma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sumitoma/mono-calc/issues"
+  },
+  "homepage": "https://github.com/sumitoma/mono-calc#readme",
+  "devDependencies": {
+    "mocha": "^7.1.1",
+    "supertest": "^4.0.2"
+  }
+}
