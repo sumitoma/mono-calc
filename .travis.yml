@@ -4,8 +4,11 @@ node_js:
     - 10    
 before_install:
     - ./setup.sh 
-install:
     - export EXPRESS_HOME=$(npm root -g)
+    - echo $EXPRESS_HOME
+env:
+    - EXPRESS_HOME=$EXPRESS_HOME
+install:
     - npm install --only=dev    
 script: 
     - npm test
