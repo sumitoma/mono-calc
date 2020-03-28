@@ -1,10 +1,11 @@
 sudo: required
 language: node_js 
 node_js:
-    - 10
+    - 10    
 before_install:
-    - ./setup.sh
+    - ./setup.sh 
 install:
+    - export EXPRESS_HOME=$(npm root -g)
     - npm install --only=dev    
 script: 
     - npm test
