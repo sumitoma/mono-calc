@@ -19,8 +19,14 @@ app.get('/add', (req, res)=>{
         if(isNaN(x) || isNaN(y)){
             res.sendStatus(STATUS.BAD_REQUEST);
         } else {
-            let result = add(Number(x), Number(y));
-            res.send("x + y = "+ result);
+            x = Number(x);
+            y = Number(y);
+            if(Number.isInteger(x) && Number.isInteger(y)){
+                let result = add(x, y);
+                res.send("x + y = "+ result);
+            } else {
+                res.sendStatus(STATUS.BAD_REQUEST);
+            }
         }
     } else {
         res.sendStatus(STATUS.BAD_REQUEST);
